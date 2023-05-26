@@ -26,6 +26,7 @@ export interface OpenAIStreamPayload {
 export async function OpenAIStream(payload: OpenAIStreamPayload) {
   const encoder = new TextEncoder();
   const decoder = new TextDecoder();
+  console.log('env: ', process.env.OPENAI_API_KEY);
 
   let counter = 0;
 
